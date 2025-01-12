@@ -14,6 +14,6 @@ White = Snow
 Red = Thunder
 
 Uses Modulino Knob to select day and toggle min/max temps.
-Uses Modulino Buttons to Switch to hourly forecast (Button A), hourly precipitation & windspeed (Button B), or weekly UV index & windspeed (Button C).
+Uses Modulino Buttons to switch to hourly forecast (Button A), hourly precipitation & windspeed (Button B), or weekly UV index & windspeed (Button C).
 Instead of relying on the cloud function, the R4 runs a simple webserver for remote control of the desired weather coordinates using the Leaflet maps API.
 Remote coordinate updates are indicated by a Modulino Buzzer sound.
