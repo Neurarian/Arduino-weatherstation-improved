@@ -1,20 +1,24 @@
 This fun little project largely expands on: https://courses.arduino.cc/plugandmake/lessons/project-weather-report/. But without the cloud requirement.
 
 Connects to home wifi and fetches weather data.
-Modulino LED array indicates day 0 to 8.
+Default Modulino LED array indicates day 0 to 8 where:
 
-Green = Sunny
-
-Blue = Rainy
-
-Violet = Foggy
-
-White = Snow
-
-Red = Thunder
+- Green = Sunny
+- Blue = Rainy
+- Violet = Foggy
+- White = Snow
+- Red = Thunder
 
 Uses Modulino Knob to select day and toggle min/max temps.
-Uses Modulino Buttons to switch to hourly forecast (Button A), hourly precipitation & windspeed (Button B), or weekly UV index & windspeed (Button C).
+
+Additionally, this approach uses Modulino Buttons to switch to hourly forecast (Button A), hourly precipitation & windspeed (Button B), or weekly UV index & windspeed (Button C).
+For Buttons B & C the LED array indication changes to:
+- Green = Low precipitation probability / UV index
+- Yellow = Mid precipitation probability / UV index
+- Orange = Mid-High precipitation probability / UV index
+- Red = High precipitation probability / UV index
+- Violet = Extreme precipitation probability / UV index
+  
 Instead of relying on the cloud function, the R4 runs a simple webserver for remote control of the desired weather coordinates using the Leaflet maps API.
 Remote coordinate updates are indicated by a Modulino Buzzer sound.
 <details>
