@@ -85,9 +85,9 @@ void getWeatherData(float latitude, float longitude, int currentHour) {
   // which will then be placed in arrays so they can be easily accessed
   String apiRequests[] = {
       "&daily=weather_code,temperature_2m_max,temperature_2m_min,uv_index_max,"
-      "wind_speed_10m_max&timezone=Europe%2FBerlin&forecast_days=8",
+      "wind_speed_10m_max&forecast_days=8",
       "&hourly=temperature_2m,precipitation_probability,weather_code,wind_"
-      "speed_10m&timezone=Europe%2FBerlin&forecast_days=2"};
+      "speed_10m&forecast_days=2"};
   for (int i = 0; i < sizeof(apiRequests) / sizeof(apiRequests[0]); i++) {
 
     client.get("/v1/forecast?latitude=" + String(latitude) +
